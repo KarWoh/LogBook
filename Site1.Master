@@ -18,6 +18,12 @@
     <%--our custom css--%>
     <link href="css/customstyle.css" rel="stylesheet" />
 
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <%--Datatables js--%>
+    <script src="datatable/js/jquery.dataTables.min.js"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -59,7 +65,7 @@
                             <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False">Logout</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
                         </li>
  
                         <li class="nav-item active">

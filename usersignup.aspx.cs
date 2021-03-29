@@ -60,7 +60,7 @@ namespace LogBook
                 {
                     Response.Write("<script>alert(''" + ex.Message + "');</script>");
                     return false;
-            }
+                }
                 
         }
 
