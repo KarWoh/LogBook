@@ -47,7 +47,7 @@
                                  </div>
 
                                   <div class="mb-3">
-                                      <asp:Button class="btn btn-primary btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+                                      <asp:Button class="btn btn-primary btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Login" />
                                  </div>
 
                                   <div class="mb-3">
