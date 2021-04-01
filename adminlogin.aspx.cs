@@ -18,7 +18,7 @@ namespace LogBook
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void BttnAdminLogin_Click(object sender, EventArgs e)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace LogBook
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("select * from admin_login_tbl where username='" + TextBox1.Text.Trim() + "' AND password='" + TextBox2.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("select * from admin_login_tbl where username='" + txtAdminId.Text.Trim() + "' AND password='" + txtPassword.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {

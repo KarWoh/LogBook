@@ -38,16 +38,16 @@
                              <div class="col">
                                <label>Admin ID</label>
                                  <div class="mb-3">
-                                     <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Admin ID"></asp:TextBox>
+                                     <asp:TextBox CssClass="form-control" ID="txtAdminId" runat="server" placeholder="Admin ID"></asp:TextBox>
                                  </div>
 
-                                  <label>Member Password</label>
+                                  <label>Admin Password</label>
                                  <div class="mb-3">
-                                     <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                     <asp:TextBox CssClass="form-control" ID="txtPassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                  </div>
 
                                   <div class="mb-3">
-                                      <asp:Button class="btn btn-primary btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+                                      <asp:Button class="btn btn-primary btn-success btn-block btn-lg" ID="AdminLoginPage" runat="server" Text="Login" OnClick="BttnAdminLoginPage_Click" />
                                  </div>
 
             

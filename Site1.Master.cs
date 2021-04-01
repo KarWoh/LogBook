@@ -15,35 +15,35 @@ namespace LogBook
             {
                 if (Session["role"].Equals(""))
                 {
-                    LinkButton1.Visible = true; //user login link button
-                    LinkButton2.Visible = true; //sing up link button
+                    UserLogin.Visible = true; 
+                    SignUp.Visible = true; 
 
-                    LinkButton3.Visible = false; //logout link button
-                    LinkButton7.Visible = false; //hello user login link button
+                    LogOut.Visible = false;
+                    UserNameDisplay.Visible = false;
 
-                    LinkButton6.Visible = true; //admin login link button
+                    AdminLogin.Visible = true; 
                 }
                 else if (Session["role"].Equals("user"))
                 {
-                    LinkButton1.Visible = false; //user login link button
-                    LinkButton2.Visible = false; //sing up link button
+                    UserLogin.Visible = false; 
+                    SignUp.Visible = false; 
 
-                    LinkButton3.Visible = true; //logout link button
-                    LinkButton7.Visible = true; //hello user login link button
-                    LinkButton7.Text = "Hello " + Session["username"].ToString();
+                    LogOut.Visible = true; 
+                    UserNameDisplay.Visible = true; 
+                    UserNameDisplay.Text = "Hello " + Session["username"].ToString();
 
-                    LinkButton6.Visible = true; //admin login link button
+                    AdminLogin.Visible = true; 
                 }
                 else if (Session["role"].Equals("admin"))
                 {
-                    LinkButton1.Visible = false; //user login link button
-                    LinkButton2.Visible = false; //sing up link button
+                    UserLogin.Visible = false; 
+                    SignUp.Visible = false;
 
-                    LinkButton3.Visible = true; //logout link button
-                    LinkButton7.Visible = true; //hello user login link button
-                    LinkButton7.Text = "Hello Admin";
+                    LogOut.Visible = true; 
+                    UserNameDisplay.Visible = true; 
+                    UserNameDisplay.Text = "Hello Admin";
 
-                    LinkButton6.Visible = false; //admin login link button
+                    AdminLogin.Visible = false; 
                 }
             }
             catch(Exception ex)
@@ -52,40 +52,40 @@ namespace LogBook
             }
         }
 
-        protected void LinkButton6_Click(object sender, EventArgs e)
+        protected void BttnAdminLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("adminlogin.aspx");
         }
 
-        protected void LinkButton4_Click(object sender, EventArgs e)
+        protected void BttnViewTask_Click(object sender, EventArgs e)
         {
             Response.Redirect("task.aspx");
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
+        protected void BttnUserLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("userlogin.aspx");
         }
 
-        protected void LinkButton2_Click(object sender, EventArgs e)
+        protected void BttnUserSignup_Click(object sender, EventArgs e)
         {
             Response.Redirect("usersignup.aspx");
         }
 
-        protected void LinkButton3_Click(object sender, EventArgs e)
+        protected void BttnLogOut_Click(object sender, EventArgs e)
         {
             Session["username"] = "";
             Session["fullname"] = "";
             Session["role"] = "";
             Session["status"] = "";
 
-            LinkButton1.Visible = true; //user login link button
-            LinkButton2.Visible = true; //sing up link button
+            UserLogin.Visible = true; 
+            SignUp.Visible = true; 
 
-            LinkButton3.Visible = false; //logout link button
-            LinkButton7.Visible = false; //hello user login link button
+            LogOut.Visible = false; 
+            UserNameDisplay.Visible = false; 
 
-            LinkButton6.Visible = true; //admin login link button
+            AdminLogin.Visible = true; 
         }
     }
 }

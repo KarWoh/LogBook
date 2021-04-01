@@ -13,7 +13,9 @@ namespace LogBook
     public partial class task : System.Web.UI.Page
     {
 
-        public string FirstName { get {
+        public string FirstName { 
+            get 
+            {
                 return txtTask.Text;
             }
             set
@@ -69,12 +71,6 @@ namespace LogBook
             {
                 Response.Write("<script>alert('Task does not Exist.');</script>");
             }
-        }
-
-        /// <summary>Go Button Click</summary>
-        protected void LinkButton4_Click(object sender, EventArgs e)
-        {
-            GetTaskById();
         }
 
         ///<summary>
